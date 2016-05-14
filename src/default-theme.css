@@ -1,0 +1,189 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* MENU */
+aside {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 100%;
+    background-color: #444444;
+    text-align: center;
+    color: #8f8d8d;
+}
+
+.inner {
+    width: 70%;
+    position: relative;
+    padding: 40px;
+    display: inline-block;
+}
+
+.logo {
+    display: block;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 0;
+    margin: 30px 30px;
+}
+
+.logo .small {
+    display: block;
+    font-size: 24px;
+    margin-top: -12px;
+    line-height: 0;
+    margin: 25px 0px;
+}
+
+aside hr {
+    margin: 10px 0px;
+    border-color: #8f8d8d;
+}
+
+aside small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+aside ul {
+    margin: 40px 0px;
+}
+
+aside ul > li {
+    list-style: none;
+}
+
+aside ul > li a {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin: 10px 0px;
+    color: #dcdcdc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+aside ul > li.active a {
+    text-decoration: underline;
+}
+
+.copyright {
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+}
+
+.copyright small {
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+/* MAIN */
+main {
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+    background-color: #e6e6e6;
+}
+
+#top {
+    width: 100%;
+    background-color: #fff;
+}
+
+#projects {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /* You can set flex-wrap and flex-direction individually */
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /* Or do it all in one line with flex flow */
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    /* tweak the where items line up on the row */
+    /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    overflow-y: auto;
+}
+
+.project {
+    transition: all 1s ease-out;
+    opacity: 0;
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    height: calc(100% * (1/4));
+    background-color: #FFF;
+    flex-basis: auto; /* default value */
+    flex-grow: 1;
+    min-width: 230px;
+    width: 33.3%;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.project > * {
+    position: absolute;
+}
+
+.project .title {
+    bottom: 30px;
+    left: 15px;
+    font-family: 'PT Sans', sans-serif;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.project .tags {
+    bottom: 10px;
+    left: 15px;
+}
+
+.project .tags > li {
+    list-style: none;
+    float: left;
+    min-width: 60px;
+    padding: 3px;
+    text-align: center;
+    font-family: verdana;
+    font-size: 9px;
+    border: 1px solid #dfdfdf;
+    color: #dfdfdf;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* PAGES */
+
+
+/* DELAY FOR EACH PROJECT */
+#projects .project:nth-child(2) { transition-delay: .1s; -webkit-transition-delay: .1s;  }
+#projects .project:nth-child(3) { transition-delay: .2s; -webkit-transition-delay: .2s;  }
+#projects .project:nth-child(4) { transition-delay: .3s; -webkit-transition-delay: .3s;  }
+#projects .project:nth-child(5) { transition-delay: .4s; -webkit-transition-delay: .4s; }
+#projects .project:nth-child(6) { transition-delay: .5s; -webkit-transition-delay: .5s;  }
+#projects .project:nth-child(7) { transition-delay: .6s; -webkit-transition-delay: .6s; }
+#projects .project:nth-child(8) { transition-delay: .7s; -webkit-transition-delay: .7s;  }
+#projects .project:nth-child(9) { transition-delay: .8s; -webkit-transition-delay: .8s; }
+#projects .project:nth-child(10) { transition-delay: .9s; -webkit-transition-delay: .9s; }
+#projects .project:nth-child(11) { transition-delay: 1.0s; -webkit-transition-delay: 1.0s; }
+#projects .project:nth-child(12) { transition-delay: 1.1s; -webkit-transition-delay: 1.1s; }

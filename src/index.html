@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jeffrey van Hoven | Developer</title>
+  <base href="/">
+  {{content-for 'head'}}
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link href='default-theme.css' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <aside>
+        <div class="inner">
+            <span class="logo">
+                JEFFREY<br />
+                <span class="small">
+                    VAN<br />
+                </span>
+                HOVEN
+            </span>
+            <hr />
+            <small>
+                Developer<br />
+                Computer Science Student
+            </small>
+            <main-nav>
+            </main-nav>
+            <a href="https://github.com/jvhoven">Check me on github</a>
+        </div>
+        <span class="copyright">
+            <small>&copy Jeffrey van Hoven. All rights reserved.</small>
+        </span>
+    </aside>
+    <main>
+        <router-outlet>
+        </router-outlet>
+    </main>
+    <script src="vendor/es6-shim/es6-shim.js"></script>
+    <script src="vendor/reflect-metadata/Reflect.js"></script>
+    <script src="vendor/systemjs/dist/system.src.js"></script>
+    <script src="vendor/zone.js/dist/zone.js"></script>
+
+    <script>
+    System.import('system-config.js').then(function () {
+      System.import('main');
+    }).catch(console.error.bind(console));
+    </script>
+</body>
+</html>
