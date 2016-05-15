@@ -23,7 +23,7 @@ export class ProjectDetailComponent implements OnActivate {
     let id = +curr.getParam('id');
     this.service.getProject(id).then(project => {
       if (project) {
-        console.log(project.name);
+        this.project = project;
       }
     });
   }

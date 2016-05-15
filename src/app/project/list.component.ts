@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { OnActivate, Router, RouteSegment, RouteTree } from '@angular/router';
-import { Project, ProjectService } from './project.service';
+import { Project, Tag, ProjectService } from './project.service';
 
 @Component({
     selector: 'app',
@@ -10,6 +10,9 @@ import { Project, ProjectService } from './project.service';
             (click)="onSelect(project)"
             [ngStyle]="project.setStyles()">
             <h2 class="title">{{project.name}}</h2>
+            <ul class="tags">
+                <li *ngFor="let tag of project.tags">{{tag.name}}</li>
+            </ul>
         </div>
     `
 })

@@ -19,7 +19,7 @@ import { ProjectService } from './project/project.service';
   { path: '/',  component: ProjectListComponent },
   { path: '/about', component: AboutComponent },
   { path: '/contact', component: ContactComponent },
-  { path: '/project:id', component: ProjectDetailComponent }
+  { path: '/project/:id', component: ProjectDetailComponent }
 ])
 export class AppComponent implements OnInit {
   constructor(private router: Router) {}
