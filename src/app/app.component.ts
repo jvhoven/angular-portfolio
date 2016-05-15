@@ -16,16 +16,16 @@ import { ProjectService } from './project/project.service';
   directives: [ROUTER_DIRECTIVES]
 })
 @Routes([
-  { path: '/projects',  component: ProjectListComponent },
+  { path: '/',  component: ProjectListComponent },
   { path: '/about', component: AboutComponent },
   { path: '/contact', component: ContactComponent },
-  { path: '/projects:id', component: ProjectDetailComponent }
+  { path: '/project:id', component: ProjectDetailComponent }
 ])
 export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-      this.router.navigate(['/projects']);
+      this.router.navigate(['/']);
   }
 
 }

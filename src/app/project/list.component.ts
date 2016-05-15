@@ -9,7 +9,7 @@ import { Project, ProjectService } from './project.service';
             [class.selected]="isSelected(project)"
             (click)="onSelect(project)"
             [ngStyle]="project.setStyles()">
-            <span class="title">{{project.name}}</span>
+            <h2 class="title">{{project.name}}</h2>
         </div>
     `
 })
@@ -32,6 +32,7 @@ export class ProjectListComponent implements OnActivate {
     }
     
     onSelect(project: Project) {
-        this.router.navigate([`./${project.id}`], this.currSegment);
+        //console.log(project.id);
+        this.router.navigate(['/project', project.id]);
     }
 }
