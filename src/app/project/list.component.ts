@@ -5,14 +5,16 @@ import { Project, Tag, ProjectService } from './project.service';
 @Component({
     selector: 'app',
     template: `
-        <div class="project" *ngFor="let project of projects"
-            [class.selected]="isSelected(project)"
-            (click)="onSelect(project)"
-            [ngStyle]="project.setStyles()">
-            <h2 class="title">{{project.name}}</h2>
-            <ul class="tags">
-                <li *ngFor="let tag of project.tags">{{tag.name}}</li>
-            </ul>
+        <div id="projects">
+            <div class="project" *ngFor="let project of projects"
+                [class.selected]="isSelected(project)"
+                (click)="onSelect(project)"
+                [ngStyle]="project.setStyles()">
+                <h2 class="title">{{project.name}}</h2>
+                <ul class="tags">
+                    <li *ngFor="let tag of project.tags">{{tag.name}}</li>
+                </ul>
+            </div>
         </div>
     `
 })

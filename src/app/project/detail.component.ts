@@ -3,11 +3,9 @@ import { OnActivate, Router, RouteSegment, RouteTree } from '@angular/router';
 import { Project, ProjectService } from './project.service';
 
 @Component({
-  template: `
-    <div *ngIf="project">
-      <h3>{{project.name}}</h3>
-    </div>
-  `
+  moduleId: module.id,
+  styleUrls: ['./templates/detail.template.css'],
+  templateUrl: './templates/detail.template.html'
 })
 export class ProjectDetailComponent implements OnActivate {
   project: Project;

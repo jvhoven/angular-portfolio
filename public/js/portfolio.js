@@ -29,4 +29,4 @@ var ProjectHandler = {
     }
 };
 
-setTimeout(() => load(), 3000);
+setTimeout(() => load(), 2000);

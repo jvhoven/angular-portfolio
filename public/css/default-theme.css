@@ -92,7 +92,7 @@ main {
     float: left;
     width: calc(100% - 300px);
     height: 100%;
-    background-color: #e6e6e6;
+    background-color: #f5f5f5;
 }
 
 #top {
@@ -121,7 +121,7 @@ main {
     /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
     -webkit-align-content: flex-start;
     align-content: flex-start;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .project {
@@ -130,12 +130,12 @@ main {
     position: relative;
     float: left;
     align-items: center;
-    height: calc(100% * (1/4));
+    height: calc(100% * (1/2));
     background-color: #FFF;
     flex-basis: auto; /* default value */
     flex-grow: 1;
-    min-width: 230px;
-    width: 33.3%;
+    min-width: calc(100% * (1/2));
+    width: 50%;
     background-position: 50% 50%;
     background-size: cover;
 }
