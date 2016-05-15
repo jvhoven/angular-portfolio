@@ -3,20 +3,8 @@ import { OnActivate, Router, RouteSegment, RouteTree } from '@angular/router';
 import { Project, Tag, ProjectService } from './project.service';
 
 @Component({
-    selector: 'app',
-    template: `
-        <div id="projects">
-            <div class="project" *ngFor="let project of projects"
-                [class.selected]="isSelected(project)"
-                (click)="onSelect(project)"
-                [ngStyle]="project.setStyles()">
-                <h2 class="title">{{project.name}}</h2>
-                <ul class="tags">
-                    <li *ngFor="let tag of project.tags">{{tag.name}}</li>
-                </ul>
-            </div>
-        </div>
-    `
+    moduleId: module.id,
+    templateUrl: './templates/list.template.html'
 })
 export class ProjectListComponent implements OnActivate {
     projects: Project[];
