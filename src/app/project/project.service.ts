@@ -9,16 +9,10 @@ export class Project {
 @Injectable()
 export class ProjectService {
     constructor(private http: Http) {}
-    
-    _data;
-    
+  
     private projectsUrl = 'http://api.jeffreyvanhoven.nl/getProjects';
     private projectUrl = 'http://api.jeffreyvanhoven.nl/getProject/';
-    
-    get data() {
-        return this._data;
-    }
-    
+     
     getProjects() : Observable<Project[]> { 
         return this.http.get(this.projectsUrl)
             .map(this.extractData)
