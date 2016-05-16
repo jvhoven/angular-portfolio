@@ -53,6 +53,17 @@ dd, dt {
     line-height: 1.42857143;
 }
 
+.frame {
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 4px;
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
+}
+
 #project { width: 100%; height: 100%; float: left; }
 #project .left { width: 40%; height: 100%; background-color: #FFF; float: left; }
 #project .right { float: right; width: 60%; height: 100%; }

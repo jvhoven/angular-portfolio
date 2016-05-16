@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { OnActivate, Router, RouteSegment, RouteTree } from '@angular/router';
-import { Project, Tag, ProjectService } from './project.service';
+import { Project, ProjectService } from './project.service';
 
 @Component({
     moduleId: module.id,
@@ -9,7 +9,8 @@ import { Project, Tag, ProjectService } from './project.service';
 export class ProjectListComponent implements OnActivate {
     projects: Project[];
     private currSegment: RouteSegment;
-    private selectedId: number;    
+    private selectedId: number;
+    private errorMessage: string;    
     
     constructor(
         private service: ProjectService,
@@ -21,7 +22,7 @@ export class ProjectListComponent implements OnActivate {
     routerOnActivate(curr: RouteSegment, prev: RouteSegment, currTree: RouteTree) {
         this.currSegment = curr;
         this.selectedId = +currTree.parent(curr).getParam('id');
-        this.service.getProjects().then(projects => this.projects = projects);
+        this.service.getProjects().subscribe(projects => this.projects = projects, error => this.errorMessage = <any>error);
     }
     
     onSelect(project: Project) {

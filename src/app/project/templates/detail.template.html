@@ -1,4 +1,4 @@
-<div id="project">
+<div *ngIf="project" id="project">
     <div class="left">
         <div class="wrap-section">
             <div class="content">
@@ -18,19 +18,26 @@
                 </div>
                 <dl>
                     <dt>Client: </dt>
-                    <dd>Themeforest</dd>
+                    <dd>{{project.client}}</dd>
                     <dt>Date: </dt>
-                    <dd>Feb 26, 2016</dd>
+                    <dd>{{project.date}}</dd>
                     <dt>Category: </dt>
-                    <dd>Web Design</dd>
+                    <dd>Application</dd>
                     <dt>Tags: </dt>
-                    <dd>Photo, Graphic, Web Design</dd>
+                    <dd>{{project.tags}}</dd>
                 </dl>
+                <br />
+                 <a [routerLink]="['/']"><< Back to projects</a>
             </div>
         </div>
     </div>
     <div class="right">
         <div class="wrap-section">
+            <div class="content">
+                <div class="frame">
+                    <img [attr.src]="'images/' + project.image" alt="" />
+                </div>
+            </div>
         </div>
     </div>
 </div>

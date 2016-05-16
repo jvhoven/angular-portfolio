@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-import { OnActivate, Router, RouteSegment, RouteTree } from '@angular/router';
+import { OnActivate, Router, RouteSegment, RouteTree, ROUTER_DIRECTIVES } from '@angular/router';
 import { Project, ProjectService } from './project.service';
 
 @Component({
   moduleId: module.id,
   styleUrls: ['./templates/detail.template.css'],
-  templateUrl: './templates/detail.template.html'
+  templateUrl: './templates/detail.template.html',
+  directives: [ROUTER_DIRECTIVES]
 })
 export class ProjectDetailComponent implements OnActivate {
-  project: Project;
+  public project: Project;
+  private errorMessage : string;
   private curSegment: RouteSegment;
   constructor(
     private service: ProjectService,
@@ -19,11 +21,11 @@ export class ProjectDetailComponent implements OnActivate {
     this.curSegment = curr;
 
     let id = +curr.getParam('id');
-    this.service.getProject(id).then(project => {
-      if (project) {
-        this.project = project;
-      }
-    });
+    this.service.getProject(id)
+      .subscribe(
+        project => this.project = project, 
+        error => this.errorMessage = <any>error
+      );
   }
   
   gotoProjects() {
