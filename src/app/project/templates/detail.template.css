@@ -68,3 +68,4 @@ dd, dt {
 #project .left { width: 40%; height: 100%; background-color: #FFF; float: left; }
 #project .right { float: right; width: 60%; height: 100%; }
 .wrap-section { padding: 60px 0; position: relative; }
+#project .left .wrap-section { background-color: #FFF; }

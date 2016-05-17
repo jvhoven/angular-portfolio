@@ -1,0 +1,79 @@
+/* Mobile landscape */
+@media only screen and (max-device-width : 760px) {
+    aside {
+        display: none !important;
+    }
+    
+    main {
+        width: 100% !important;
+        margin-top: 60px;
+    }
+
+    #project .left, #project .right {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .project {
+        width: 100% !important;
+    } 
+    
+    .hamburger {
+        padding: 20px;
+        display: block;
+    }
+    
+    .hamburger .logo {
+        margin: 0;
+        font-size: 20px;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+}
+
+/* Mobile portrait */
+@media only screen and (max-device-width : 414px) {
+    aside {
+        display: none !important;
+    }
+    
+    main {
+        width: 100% !important;
+        margin-top: 60px;
+    }
+
+    #project .left, #project .right {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .project {
+        width: 100% !important;
+    } 
+    
+    .hamburger {
+        padding: 20px;
+        display: block;
+    }
+    
+    .hamburger .logo {
+        margin: 0;
+        font-size: 20px;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+}
+
+/* Tablet portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
+    .project {
+        width: 50% !important;
+        height: 250px;
+        overflow-y: hidden;
+    }
+    
+    #project .left, #project .right {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
