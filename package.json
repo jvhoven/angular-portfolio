@@ -9,12 +9,12 @@
     "lint": "tslint \"src/**/*.ts\"",
     "format": "clang-format -i -style=file --glob=src/**/*.ts",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "minify": "uglifyjs dist/main.js --screw-ie8 --compress --mangle --output dist/main.min.js"
   },
   "private": true,
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",
-    "@angular/compiler": "2.0.0-rc.3",
     "@angular/core": "2.0.0-rc.3",
     "@angular/forms": "0.1.1",
     "@angular/http": "2.0.0-rc.3",
@@ -43,6 +43,7 @@
     "ts-node": "^0.5.5",
     "tslint": "^3.6.0",
     "typescript": "^1.8.10",
-    "typings": "^0.8.1"
+    "typings": "^0.8.1",
+    "uglifyjs": "^2.4.10"
   }
 }
