@@ -1,35 +1,38 @@
-import { Component } from '@angular/core';
-import { OnActivate, Router, RouteSegment, RouteTree, ROUTER_DIRECTIVES } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Project, ProjectService } from './project.service';
 
 @Component({
   moduleId: module.id,
   styleUrls: ['./templates/detail.template.css'],
-  templateUrl: './templates/detail.template.html',
-  directives: [ROUTER_DIRECTIVES]
+  templateUrl: './templates/detail.template.html'
 })
-export class ProjectDetailComponent implements OnActivate {
+export class ProjectDetailComponent implements OnInit, OnDestroy {
   public project: Project;
   private errorMessage : string;
-  private curSegment: RouteSegment;
+  private sub : any;
   constructor(
+    private route: ActivatedRoute,
     private service: ProjectService,
     private router: Router
   ) {}
 
-  routerOnActivate(curr: RouteSegment) {
-    this.curSegment = curr;
-
-    let id = +curr.getParam('id');
-    this.service.getProject(id)
+  ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      let id = +params['id'];
+      this.service.getProject(id)
       .subscribe(
-        project => this.project = project, 
+        project => this.project = project,
         error => this.errorMessage = <any>error
       );
+    });
   }
-  
-  gotoProjects() {
-    let projectId = this.project ? this.project.id : null;
-    this.router.navigate(['/', {id: projectId}]);
+
+  goToProjects() {
+    this.router.navigate(['/']);
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }

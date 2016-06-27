@@ -6,10 +6,7 @@
                     <h5 class="title">{{project.name}}</h5>
                 </div>
                 <p>
-                    Nullam mattis condimentum molestie. Nam gravida elementum dui sit amet ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Duis a velit libero, eu aliquam nisi. Integer ac massa tortor, at eleifend nisi.<br /><br />
-                    Lorem ipsum dolor sit amet, ad eam enim atqui, nam ei phaedrum indoctum forensibus, mei reque veritus incorrupte id. 
-                    Duo legendos accommodare cu, vix eu impedit splendide concludaturque. Nam ne clita graece conceptam.
+                  {{project.description}}
                 </p>
                 </div>
                 <div class="content">
@@ -27,7 +24,7 @@
                     <dd>{{project.tags}}</dd>
                 </dl>
                 <br />
-                 <a [routerLink]="['/']"><< Back to projects</a>
+                 <a href="javascript:void()" (click)="goToProjects()"><< Back to projects</a>
             </div>
         </div>
     </div>
