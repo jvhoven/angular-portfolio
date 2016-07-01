@@ -29,6 +29,7 @@ export class ProjectService {
          if(res.status < 200 || res.status >= 300) {
              throw new Error('Response status: ' + res.status);
          }
+
          let body = res.json();
          return body || { };
      }
