@@ -4,7 +4,6 @@ import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 import { ProjectListComponent } from './project/list.component';
 import { ProjectDetailComponent } from './project/detail.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 
 import { ProjectService } from './project/project.service';
 
