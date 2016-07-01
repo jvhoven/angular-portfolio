@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app',
-    template: `
-        <h1>Hello about!</h1>
-    `
+    moduleId: module.id,
+    styleUrls: ['./templates/about.template.css'],
+    templateUrl: './templates/about.template.html'
 })
 export class AboutComponent {
-    constructor() {}
+    constructor(private router: Router) {}
+
+    goToProjects() {
+      this.router.navigate(['/']);
+    }
 }

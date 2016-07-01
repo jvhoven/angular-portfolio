@@ -67,7 +67,7 @@ aside ul > li a {
     margin: 10px 0px;
     color: #dcdcdc;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 aside ul > li.active a {
@@ -101,7 +101,7 @@ aside ul > li.active a {
     border-radius: 4px;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .github:hover {
