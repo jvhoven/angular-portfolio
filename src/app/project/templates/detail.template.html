@@ -23,10 +23,11 @@
                     <dt>Tags: </dt>
                     <dd>{{project.tags}}</dd>
                 </dl>
-                <a class="button" target="_blank" *ngIf="project.repository" href="{{project.repository}}">View code</a>
-                <a class="button" target="_blank" *ngIf="project.preview" href="{{project.preview}}">View code</a>
-                <br />
-                 <a href="javascript:void()" (click)="goToProjects()"><< Back to projects</a>
+                <div class="buttons">
+                  <a class="button" target="_blank" *ngIf="project.repository" href="{{project.repository}}">View code</a>
+                  <a class="button" target="_blank" *ngIf="project.preview" href="{{project.preview}}">View preview</a>
+                </div>
+                <a href="javascript:void()" (click)="goToProjects()"><< Back to projects</a>
             </div>
         </div>
     </div>
