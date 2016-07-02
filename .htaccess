@@ -1,4 +1,4 @@
-RewriteEngine On  
+RewriteEngine On
   # If an existing asset or directory is requested go to it as it is
     RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
     RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
@@ -6,3 +6,24 @@ RewriteEngine On
 
     # If the requested resource doesn't exist, use index.html
     RewriteRule ^ /index.html
+
+    # Rewrite http://xxx.nl to http://www
+    RewriteCond %{HTTP_HOST} ^www\.jeffreyvanhoven\.nl$
+    RewriteRule ^/?$ "http\:\/\/jeffreyvanhoven\.nl\/" [R=301,L]
+
+    # Rewrite http://jeffreyvanhoven.nl to http://www
+    RewriteCond %{HTTP_HOST} !^www.jeffreyvanhoven.nl$ [NC]
+    RewriteRule ^(.*)$ http://www.jeffreyvanhoven.nl/$1 [L,R=301]
+
+    # Block libwww-perl botnets
+    RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
+    RewriteRule .* ? [F,L]
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>

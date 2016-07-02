@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
     moduleId: module.id,
     styleUrls: ['./templates/about.template.css'],
-    templateUrl: './templates/about.template.html'
+    templateUrl: './templates/about.template.html',
+    directives: [ROUTER_DIRECTIVES]
 })
-export class AboutComponent {
-    constructor(private router: Router) {}
-
-    goToProjects() {
-      this.router.navigate(['/']);
-    }
-}
+export class AboutComponent { }

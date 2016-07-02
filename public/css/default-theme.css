@@ -227,7 +227,6 @@ main {
     z-index: 9999;
     display: none;
     width: 100%;
-    height: 40px;
     background-color: #444444;
     color: #FFF;
 }

@@ -1,11 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Project, ProjectService } from './project.service';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
   moduleId: module.id,
   styleUrls: ['./templates/detail.template.css'],
-  templateUrl: './templates/detail.template.html'
+  templateUrl: './templates/detail.template.html',
+  directives: [ROUTER_DIRECTIVES]
 })
 export class ProjectDetailComponent implements OnInit, OnDestroy {
   public project: Project;

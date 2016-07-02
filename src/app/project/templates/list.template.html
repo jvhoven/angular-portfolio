@@ -1,9 +1,11 @@
-<div id="projects">
-    <div class="project" *ngFor="let project of projects" [class.selected]="isSelected(project)" (click)="onSelect(project)">
-        <div class="background" [ngStyle]="{'background-image': 'url(images/' + project.image + ')' }">
-          <div *ngIf="!project.is_dark" class="overlay">
+<main>
+  <div id="projects">
+      <div class="project" *ngFor="let project of projects" [class.selected]="isSelected(project)" (click)="onSelect(project)">
+          <div class="background" [ngStyle]="{'background-image': 'url(images/' + project.image + ')' }">
+            <div *ngIf="!project.is_dark" class="overlay">
+            </div>
           </div>
-        </div>
-        <h2 class="title">{{project.name}}</h2>
-    </div>
-</div>
+          <h2 class="title">{{project.name}}</h2>
+      </div>
+  </div>
+</main>

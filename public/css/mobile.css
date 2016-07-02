@@ -3,7 +3,11 @@
     aside {
         display: none !important;
     }
-    
+
+    aside {
+      background-color: blue;
+    }
+
     main {
         width: 100% !important;
         margin-top: 60px;
@@ -13,21 +17,65 @@
         width: 100% !important;
         height: auto !important;
     }
-    
+
     .project {
         width: 100% !important;
-    } 
-    
-    .hamburger {
-        padding: 20px;
-        display: block;
     }
-    
+
+    .hamburger {
+        display: block;
+        min-height: 60px;
+    }
+
     .hamburger .logo {
+        display: inline-block;
         margin: 0;
         font-size: 20px;
         text-transform: uppercase;
-        line-height: 40px;
+        line-height: 25px;
+    }
+
+    .hamburger .container {
+      padding: 20px;
+    }
+
+    .hamburger a {
+      float: right;
+      color: #FFF;
+      font-size: 18px;
+    }
+
+    .hamburger ul {
+      display: none;
+      position: absolute;
+      background-color: #616161;
+      margin: 0;
+      width: 100%;
+    }
+
+    .hamburger ul.active {
+      display: block;
+    }
+
+    .hamburger li {
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      float: left;
+    }
+
+    .hamburger li > a {
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      box-sizing: border-box;
+      padding: 15px;
+
+      font-family: verdana;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-decoration: none;
     }
 }
 
@@ -36,42 +84,42 @@
     aside {
         display: none !important;
     }
-    
+
     main {
         width: 100% !important;
         margin-top: 60px;
+        padding-left: 0;
     }
 
     #project .left, #project .right {
         width: 100% !important;
         height: auto !important;
     }
-    
+
     .project {
         width: 100% !important;
-    } 
-    
+    }
+
     .hamburger {
-        padding: 20px;
         display: block;
     }
-    
+
     .hamburger .logo {
         margin: 0;
         font-size: 20px;
         text-transform: uppercase;
-        line-height: 40px;
+        line-height: 25px;
     }
 }
 
 /* Tablet portrait */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     .project {
         width: 50% !important;
         height: 250px;
         overflow-y: hidden;
     }
-    
+
     #project .left, #project .right {
         width: 100% !important;
         height: auto !important;

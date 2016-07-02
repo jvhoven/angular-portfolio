@@ -1,54 +1,56 @@
-<div id="project">
-    <div class="left">
-        <div class="wrap-section">
+<main>
+  <div id="project">
+      <div class="left">
+          <div class="wrap-section">
+              <div class="content">
+                  <div class="title-section">
+                      <h5 class="title">About me</h5>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+              </div>
             <div class="content">
-                <div class="title-section">
-                    <h5 class="title">About me</h5>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-          <div class="content">
-            <div class="title-section">
-              <h5 class="title">Education</h5>
-            </div>
-            <dl>
-                <dt>Erasmus College, Zoetermeer</dt>
-                <dd>VMBO/MAVO, VMBO-TL</dd>
-                <dt>ID-College, Zoetermeer</dt>
-                <dd>MBO, Application developer</dd>
-                <dt>The Hague University, Zoetermeer</dt>
-                <dd>Computer Science</dd>
-            </dl>
-          </div>
-          <div class="content">
               <div class="title-section">
-                <h5 class="title">Work experience</h5>
+                <h5 class="title">Education</h5>
               </div>
               <dl>
-                  <dt>Intratuin Zuidplas, Zevenhuizen, 2011-2012</dt>
-                  <dd>General Employee</dd>
-                  <dt>Edit4U Webservices, Zoetermeer, 2013-2013</dt>
-                  <dd>Backend Developer</dd>
-                  <dt>High Attention, Waddinxveen, 2013-2015</dt>
-                  <dd>Allround Developer</dd>
+                  <dt>Erasmus College, Zoetermeer</dt>
+                  <dd>VMBO/MAVO, VMBO-TL</dd>
+                  <dt>ID-College, Zoetermeer</dt>
+                  <dd>MBO, Application developer</dd>
+                  <dt>The Hague University, Zoetermeer</dt>
+                  <dd>Computer Science</dd>
               </dl>
-              <br />
-               <a href="javascript:void(0)" (click)="goToProjects()"><< Back to projects</a>
             </div>
-        </div>
-    </div>
-    <div class="right">
-        <div class="wrap-section">
             <div class="content">
-                <div class="frame">
-
+                <div class="title-section">
+                  <h5 class="title">Work experience</h5>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                <dl>
+                    <dt>Intratuin Zuidplas, Zevenhuizen, 2011-2012</dt>
+                    <dd>General Employee</dd>
+                    <dt>Edit4U Webservices, Zoetermeer, 2013-2013</dt>
+                    <dd>Backend Developer</dd>
+                    <dt>High Attention, Waddinxveen, 2013-2015</dt>
+                    <dd>Allround Developer</dd>
+                </dl>
+                <br />
+                 <a [routerLink]="['/']"><< Back to projects</a>
+              </div>
+          </div>
+      </div>
+      <div class="right">
+          <div class="wrap-section">
+              <div class="content">
+                  <div class="frame">
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>

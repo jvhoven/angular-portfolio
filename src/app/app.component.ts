@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 
-import { ProjectListComponent } from './project/list.component';
-import { ProjectDetailComponent } from './project/detail.component';
-import { AboutComponent } from './about/about.component';
-
 import { ProjectService } from './project/project.service';
+import { AsideComponent } from './elements/aside.component'
 
 @Component({
   moduleId: module.id,
-  selector: 'main',
-  template: `<router-outlet></router-outlet>`,
+  selector: 'app',
+  template: `
+    <menu></menu>
+    <router-outlet></router-outlet>
+  `,
   providers: [ProjectService],
-  directives: [ROUTER_DIRECTIVES]
+  directives: [AsideComponent, ROUTER_DIRECTIVES]
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router) {}
